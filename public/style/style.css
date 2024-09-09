@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+.navbar .nome p {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 300;
+}
+.navbar .nome p span {
+  color: #4169e1;
+}
+.navbar .lista {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .lista li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+.navbar .lista li a:hover {
+  color: #4169e1;
+}
+.navbar .lista li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #4169e1;
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+.navbar .lista li a:hover::after {
+  width: 100%;
+}
+.navbar .menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar .lista {
+    display: flex;
+    width: 150px;
+    height: 130px;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 13px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  .navbar .menu-icon {
+    display: block;
+  }
+  .navbar.active .lista {
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  color: #a3a3a3;
+}
+header .textMurilo {
+  width: 60%;
+}
+header .textMurilo h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #4169e1;
+  font-weight: 400;
+}
+header .textMurilo .divTextMurilo p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+header .textMurilo .divTextMurilo span {
+  color: white;
+  font-weight: 600;
+}
+header .tech-list {
+  width: 35%;
+}
+header .tech-list p {
+  font-size: 20px;
+  margin-top: 210px;
+  color: white;
+  margin-bottom: -10px;
+}
+header .tech-list ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header .tech-list ul li {
+  color: #4169e1;
+  border-color: #4169e1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 5px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+header .tech-list ul li:hover {
+  background-color: #4169e1;
+  color: white;
+  cursor: default;
+}
+header .tech-list .techIdioma {
+  font-size: 20px;
+  color: white;
+  margin-top: -1px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  header .textMurilo {
+    width: 90%;
+  }
+  header .textMurilo h1 {
+    font-size: 55px;
+  }
+  header .textMurilo .divTextMurilo p {
+    font-size: 17px;
+  }
+  header .tech-list {
+    width: 90%;
+  }
+  header .tech-list p {
+    margin-top: -1px;
+  }
+  header .tech-list ul {
+    justify-content: center;
+  }
+}
+section {
+  background-color: #09090b;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-bottom: 80px;
+}
+
+.divProjetos {
+  text-align: center;
+  padding-top: 5px;
+}
+.divProjetos h2 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #4169e1;
+  font-weight: 400;
+}
+.divProjetos p {
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.divProjetos span {
+  color: white;
+}
+
+.listaProjetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.listaProjetos li {
+  width: 300px;
+  border: 2px solid #4169e1;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #09090b;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.listaProjetos li h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: #4169e1;
+}
+.listaProjetos li p {
+  font-size: 1rem;
+  color: #a3a3a3;
+  margin: 0;
+}
+.listaProjetos li a {
+  color: #4169e1;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.listaProjetos li a:hover {
+  color: white;
+}
+.listaProjetos li span {
+  color: white;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .listaProjetos .listaProjetos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .listaProjetos li {
+    width: 90%;
+    margin-right: 40px;
+  }
+  .listaProjetos a {
+    text-align: center;
+  }
+}
+
+footer {
+  background-color: #000000;
+  padding: 40px 20px;
+  text-align: center;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+footer .textMurilo {
+  width: 60%;
+  margin: 0 auto;
+}
+footer .textMurilo h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #4169e1;
+  font-weight: 400;
+}
+footer .textMurilo .divTextMurilo p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #a3a3a3;
+}
+footer .textMurilo .divTextMurilo p a {
+  color: #4169e1;
+  text-decoration: none;
+}
+footer .textMurilo .divTextMurilo p a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  footer .textMurilo {
+    width: 90%;
+  }
+  footer .textMurilo h1 {
+    font-size: 55px;
+  }
+  footer .textMurilo .divTextMurilo p {
+    font-size: 17px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hidden2 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 0.5s;
+}
+
+.hidden3 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 1s;
+}
+
+.hidden4 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition-delay: 1.6s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}/*# sourceMappingURL=style.css.map */
